@@ -8,7 +8,7 @@ from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-SECRET_KEY = env("SECRET_KEY")
+SECRET_KEY=env("SECRET_KEY")
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
@@ -25,7 +25,6 @@ CSRF_TRUSTED_ORIGINS = ['https://cloth-store-project-backend-api.onrender.com','
 CORS_ALLOW_ALL_ORIGINS = True
 
 # Application definition
-
 # LOGIN_URL='https://foysal777.github.io/cloth_store_final_project/login.html'
 
 

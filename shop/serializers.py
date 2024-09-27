@@ -2,13 +2,25 @@ from rest_framework import serializers
 from .models import Product, Review, Wishlist
 from django.contrib.auth.models import User
 from .models import UserReview
+from .utils import upload_image_to_imgbb 
 
 class ProductSerailizers(serializers.ModelSerializer):
+    image = serializers.ImageField(write_only=True, required=False)
     class Meta :
         model = Product
-        fields = '__all__'
+        fields =['id' , 'name' , 'description' , 'image'  , 'price' , 'image_url' , 'rating' , 'size' , 'color' ]
         
-        
+    
+    
+    def create(self, validated_data):
+        image_file = validated_data.pop('image_file', None)
+        if image_file:
+            image_url = upload_image_to_imgbb(image_file)
+            if image_url:
+                validated_data['image_url'] = image_url
+        return super().create(validated_data)
+    
+    
 class ReviewSerializers(serializers.ModelSerializer):
     
     # for see the api string realted user 

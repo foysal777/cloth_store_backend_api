@@ -16,6 +16,20 @@ from rest_framework.authtoken.models import Token
 from .models import Product, Review , Wishlist , UserReview
 from .serializers import ProductSerailizers , ReviewSerializers , WishlistSerializers ,UserReviewSerializer
 
+
+
+class image_urlView(viewsets.ModelViewSet):
+    queryset = Product.objects.all()
+    serializer_class = ProductSerailizers
+    # permission_classes = [IsAuthenticated]
+
+    def perform_create(self, serializer):
+        serializer.save(created_by=self.request.user)
+
+
+
+
+
 class AverageRatingView(APIView):
     def get(self, request):
         # Get all star ratings as integers

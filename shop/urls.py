@@ -1,6 +1,6 @@
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from .views import image_urlView, ProductViewset , ReviewViewset , WishListViewset , UserReviewViewSet  , AverageRatingView
+from .views import  ProductViewset , ReviewViewset , WishListViewset , UserReviewViewSet  , AverageRatingView
 from . import views
 
 router = DefaultRouter()
@@ -8,7 +8,7 @@ router.register('product' , ProductViewset)
 router.register('Review' , ReviewViewset)
 router.register('wishlist' , WishListViewset)
 router.register('userreviews', UserReviewViewSet , basename='reuser')
-router.register('imgurl', image_urlView , basename='imgurl')
+
 
 
 

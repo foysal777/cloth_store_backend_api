@@ -18,13 +18,6 @@ from .serializers import ProductSerailizers , ReviewSerializers , WishlistSerial
 
 
 
-class image_urlView(viewsets.ModelViewSet):
-    queryset = Product.objects.all()
-    serializer_class = ProductSerailizers
-    # permission_classes = [IsAuthenticated]
-
-    def perform_create(self, serializer):
-        serializer.save(created_by=self.request.user)
 
 
 

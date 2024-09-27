@@ -25,7 +25,7 @@ class Product(models.Model):
     name  =  models.CharField(max_length=100)
     description = models.TextField()
     price = models.DecimalField(max_digits=10, decimal_places=2)
-    image_url = models.CharField(max_length=255, null=True, blank=True)     
+    image= models.CharField(max_length=255,default='' )     
     size = models.CharField(max_length=20, choices= SIZE)
     color = models.CharField(max_length=30)
     rating = models.CharField(max_length=30 , choices=STAR_CHOICE)

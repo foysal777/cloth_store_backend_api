@@ -28,7 +28,6 @@ CORS_ALLOW_ALL_ORIGINS = True
 # LOGIN_URL='https://foysal777.github.io/cloth_store_final_project/login.html'
 
 
-
 INSTALLED_APPS = [
       
     "whitenoise.runserver_nostatic",

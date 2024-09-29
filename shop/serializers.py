@@ -4,11 +4,12 @@ from django.contrib.auth.models import User
 from .models import UserReview
 
 
+
 class ProductSerailizers(serializers.ModelSerializer):
 
     class Meta :
         model = Product
-        fields =['id' , 'name' , 'description' , 'image'  , 'price' , 'image_url' , 'rating' , 'size' , 'color' ]
+        fields =['id' , 'name' , 'description' , 'image_url'  , 'price' , 'rating' , 'size' , 'color' ]
         
     
     

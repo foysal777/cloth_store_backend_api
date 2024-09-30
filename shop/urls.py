@@ -1,6 +1,6 @@
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from .views import  ProductViewset , ReviewViewset , WishListViewset , UserReviewViewSet  , AverageRatingView
+from .views import  ProductViewset , ReviewViewset ,UserProfileView, WishListViewset , UserReviewViewSet  , AverageRatingView
 from . import views
 
 router = DefaultRouter()
@@ -15,6 +15,7 @@ router.register('userreviews', UserReviewViewSet , basename='reuser')
 
 urlpatterns = [
     path('' , include(router.urls)),  
+    path('api/user/profile/', UserProfileView.as_view(), name='user-profile'),
     path('register/' , views.userRegistration.as_view() , name= 'register'),
     path('active/<uid64>/<token>/', views.activate, name = 'activate'),
     path('login/', views.UserLoginApiView.as_view(), name='login'),

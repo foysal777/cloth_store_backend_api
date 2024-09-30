@@ -14,11 +14,17 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from rest_framework.authtoken.models import Token
 from .models import Product, Review , Wishlist , UserReview
-from .serializers import ProductSerailizers , ReviewSerializers , WishlistSerializers ,UserReviewSerializer
+from .serializers import ProductSerailizers , UserProfileSerializer ,ReviewSerializers , WishlistSerializers ,UserReviewSerializer
 
 
 
+class UserProfileView(APIView):
+    # permission_classes = [IsAuthenticated]  # Only authenticated users can access this
 
+    def get(self, request):
+        user = request.user  # Get the authenticated user
+        serializer = UserProfileSerializer(user)  # Serialize the user data
+        return Response(serializer.data) 
 
 
 

@@ -3,6 +3,7 @@ from django.contrib import messages
 from rest_framework import viewsets
 from rest_framework.views import APIView
 from  . import serializers
+from rest_framework.permissions import IsAuthenticated
 from rest_framework import status
 from rest_framework.response import Response
 from django.contrib.auth.tokens import default_token_generator
@@ -19,7 +20,7 @@ from .serializers import ProductSerailizers , UserProfileSerializer ,ReviewSeria
 
 
 class UserProfileView(APIView):
-    # permission_classes = [IsAuthenticated]  # Only authenticated users can access this
+    permission_classes = [IsAuthenticated]  
 
     def get(self, request):
         user = request.user  # Get the authenticated user

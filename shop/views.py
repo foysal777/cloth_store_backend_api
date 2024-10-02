@@ -19,15 +19,23 @@ from .serializers import ProductSerailizers , UserProfileSerializer ,ReviewSeria
 
 
 
+# class UserProfileView(APIView):
+#     permission_classes = [IsAuthenticated]
+
+#     def get(self, request):
+#         user = request.user  
+#         serializer = UserProfileSerializer(user)  
+#         return Response(serializer.data) 
+
+
 class UserProfileView(APIView):
-     
+    permission_classes = [IsAuthenticated]
 
     def get(self, request):
-        user = request.user  
-        serializer = UserProfileSerializer(user)  
-        return Response(serializer.data) 
-
-
+        user = request.user
+        if user.is_staff:  
+            return Response({"is_admin": True})
+        return Response({"is_admin": False})
 
 
 class AverageRatingView(APIView):

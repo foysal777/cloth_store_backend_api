@@ -15,7 +15,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from rest_framework.authtoken.models import Token
 from .models import Product, Review , Wishlist , UserReview
-from .serializers import ProductSerailizers , UserProfileSerializer ,ReviewSerializers , WishlistSerializers ,UserReviewSerializer
+from .serializers import ProductSerailizers  ,ReviewSerializers , WishlistSerializers ,UserReviewSerializer
 
 
 

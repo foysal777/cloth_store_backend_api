@@ -29,12 +29,13 @@ from .serializers import ProductSerailizers  ,ReviewSerializers , WishlistSerial
 
 
 class UserProfileView(APIView):
-
+    permission_classes = [IsAuthenticated]  
 
     def get(self, request):
         user = request.user
-        if user.is_staff:  
-            return Response({"is_admin": True})
+        if user.is_authenticated:
+           
+            return Response({"is_admin": user.is_staff})
         return Response({"is_admin": False})
 
 

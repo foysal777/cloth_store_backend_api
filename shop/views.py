@@ -29,7 +29,7 @@ from .serializers import ProductSerailizers  ,ReviewSerializers , WishlistSerial
 
 
 class UserProfileView(APIView):
-    permission_classes = [IsAuthenticated]
+
 
     def get(self, request):
         user = request.user

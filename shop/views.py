@@ -33,6 +33,8 @@ class UserProfileView(APIView):
 
     def get(self, request):
         user = request.user
+        print(user)
+        print(user.is_staff)
         if user.is_authenticated:
            
             return Response({"is_admin": user.is_staff})

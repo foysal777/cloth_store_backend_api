@@ -85,6 +85,8 @@ class ProductViewset(viewsets.ModelViewSet):
             queryset = queryset.filter(color__icontains=color)
         if name:
             queryset = queryset.filter(name__icontains=name)
+            
+        queryset = queryset.distinct('color')
         return queryset
     
 class ReviewViewset(viewsets.ModelViewSet):

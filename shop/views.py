@@ -15,17 +15,22 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
 from rest_framework.authtoken.models import Token
 from .models import Product, Review , Wishlist , UserReview
-from .serializers import ProductSerailizers  ,ReviewSerializers , WishlistSerializers ,UserReviewSerializer
+from .serializers import ProductSerailizers , MyProfileSerializer  ,ReviewSerializers , WishlistSerializers ,UserReviewSerializer
 
 
 
-# class UserProfileView(APIView):
-#     permission_classes = [IsAuthenticated]
 
-#     def get(self, request):
-#         user = request.user  
-#         serializer = UserProfileSerializer(user)  
-#         return Response(serializer.data) 
+
+class UsermyProfileView(APIView):
+    
+    def get(self, request, *args, **kwargs):
+        user = request.user  
+        serializer = MyProfileSerializer(user)
+        return Response(serializer.data)
+
+
+
+
 
 
 class UserProfileView(APIView):

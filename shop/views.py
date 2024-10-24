@@ -148,7 +148,7 @@ def activate(request, uid64, token):
         user.save()
         messages.success(request, "Your account has been activated! You can now log in.")
     
-        return redirect('https://foysal777.github.io/cloth_store_final_project/login.html')
+        return redirect('https://foysal777.github.io/cloth-store-live-fronted/login.html')
     else:
         messages.error(request, "Activation link is invalid or has expired. Please register again.")
         return redirect('register')

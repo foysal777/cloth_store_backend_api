@@ -1,6 +1,7 @@
 # Cloth Store Project
 
-An e-commerce platform designed for selling clothing, with a range of features to enhance user experience. Users can browse items, add products to their cart, view product details, and perform various actions like sorting, filtering, and searching to find the perfect outfit.Thre are two types of user 
+An e-commerce platform designed for selling clothing, with a range of features to enhance user experience. Users can browse items, add products to their cart, view product details, and perform various actions like sorting, filtering, and searching to find the perfect outfit.
+There are two types of user 
 1) Admin
 2) User
 
@@ -52,7 +53,7 @@ An e-commerce platform designed for selling clothing, with a range of features t
 - **APIs**: For potential integration with external services
 
 ## Usages
-- Navigate to https://foysal777.github.io/cloth-store-live-fronted/ in your browser.
+- Navigate to https://cloth-store-backend-api.vercel.app/ in your browser.
 - Register as a new user or login if you already have an account.
 - Browse products, add them to your cart, view details, and interact with wishlists and reviews.
 - Access your dashboard to manage your profile, view your orders, and check out saved items.

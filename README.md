@@ -33,6 +33,16 @@ An e-commerce platform designed for selling clothing, with a range of features t
 - **Product Search, Filter, and Sort**: Search for items, filter by category, and price, and sort by popularity, price, or latest.
 - **Contact Form**: Customers can reach out to the store team with questions or feedback.
 
+## Api documentation
+- **User Registration**: POST /shop/register/
+- **User Login**: POST /shop/login/
+- **User Logout**: POST /shop/logout/
+- **Product List**: GET /product/
+- **Product Details**: GET product/<product_id>/
+- **Add to Cart**: POST shop/cart/
+- **Wishlist**: POST shop/wishlist/
+
+
 ## Technologies Used
 
 - **Frontend**: HTML, CSS, JavaScript

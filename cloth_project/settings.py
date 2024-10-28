@@ -42,9 +42,16 @@ INSTALLED_APPS = [
       'corsheaders',
       
     'rest_framework.authtoken',
-    'shop'
+    'shop',
+    'payment'
 ]
 
+# settings.py
+
+# SSL_COMMERZ_STORE_ID = "foysa671dabfd11ca2"
+# SSL_COMMERZ_STORE_PASSWORD = "foysa671dabfd11ca2@ssl"
+# SSL_COMMERZ_BASE_URL = "https://sandbox.sslcommerz.com"  
+# SSL_COMMERZ_SANDBOX_MODE = True
 
 
 
